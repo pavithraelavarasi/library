@@ -1,0 +1,73 @@
+														LIBRARY MANAGEMENT
+								
+						MENU - > 
+										LOGIN : Both Admin and user able to login
+								ADMIN :	- Admin able to add users and books
+										- Admin able to see the users borrowing history
+										- Admin able to increase the stock of the book and view all the books.
+								USER : - User able to take and reservation a book
+									   - User able to retrun the book;
+									   - User able to search a book by title/author/category
+									   - user able to see their transaction history and all the books
+			
+MODEL CLASS 
+	User :
+		private String name;
+        private String email;
+        private String login;
+        private String pass;
+        private long phNo;
+        
+    Author : 
+    	private int author_id;
+		private String author_name;
+		private String nick_name;
+						
+						
+	 DATABASE:
+     
+     TABLES:
+     		librarymanagement=# select * from admin ;
+     		ADMIN :
+     		
+						 login  | password 
+						--------+----------
+						 pavi01 | pavi
+			
+			librarymanagement=# select * from author;
+			
+			AUTHOR :
+			 author_id |    author_name    |   nick_name   
+			-----------+-------------------+---------------
+					 1 | peter             | pet
+					 2 | john              | joii
+					 3 | bharathiyar       | mahakavi
+					 4 | bharathidasan     | bharathidasan
+					 5 | williamWordsworth | wordsworth
+					 
+						librarymanagement=# select * from books;
+			BOOKS:		
+				
+			 book_id |      title      | author_id | available_stock | available_status | category  | published_date 
+			---------+-----------------+-----------+-----------------+------------------+-----------+----------------
+				   1 | genetics        |         1 |              11 | available        | biology   | 2001-02-02
+				   2 | java            |         2 |               6 | available        | computer  | 2000-01-01
+				   3 | panjaliSabatham |         3 |              10 | available        | tamilEpic | 2022-05-05
+				   4 | irundaVeedu     |         4 |              10 | available        | noval     | 2000-12-12
+				   5 | Lucy_Gray       |         5 |               6 | available        | poem      | 1799-01-01
+				   
+				   
+				   		librarymanagement=# select * from users;
+				  USERS: 		
+				   		
+				 user_id | user_name | login  | pwd |      email      |   phone    
+				---------+-----------+--------+-----+-----------------+------------
+					   2 | abi       | abi07  | aa  | abi@gmail.com   | 8090809089
+					   1 | kavi      | kavi12 | kk  | kavi@gmail.com  | 9080706050
+					   3 | rio       | rio99  | rr  | rio@gmail.com   | 8079687867
+					   4 | arjun     | arj66  | aa  | arjun@gmail.com | 9080706050
+					   5 | pooja     | pooja1 | pp  | pooja@gmail.com | 7080906789
+					   6 | anu       | anu11  | aa  | anu@gmail.com   | 9768678777
+
+
+
